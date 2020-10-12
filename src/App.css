@@ -1,0 +1,56 @@
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 360px;
+  font-weight: 900;
+  text-shadow: 4px 4px #ff0000, 8px 8px #ffff00, 12px 12px #0000ff;
+  transition: all 0.2s ease-out;
+}
+
+section, main {
+  flex-basis: 50%;
+  display: flex;
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+
+main {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main h1 {
+  transform: translateX(10px);
+}
+
+section {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+section h1 {
+  transform: translateX(-10px);
+}
+
+section:hover,
+main:hover {
+  transform: scale(1.01);
+}
+
+section:hover {
+  box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+section:hover h1,
+main:hover h1 {
+  transform: translateX(0);
+  text-shadow: none;
+}
+
+main:hover {
+  box-shadow: -2px 0 10px 5px rgba(0, 0, 0, 0.2);
+}
